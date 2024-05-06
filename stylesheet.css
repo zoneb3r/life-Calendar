@@ -1,0 +1,7 @@
+.main-title {
+    color: rgb(0, 0, 0);
+    border: 4px solid black;
+    padding: 5px;
+    display: inline-block;
+    border-radius: 20px;
+}
