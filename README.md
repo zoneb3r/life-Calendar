@@ -12,3 +12,5 @@
 - 구현시 변수명, 클래스명, 부연 설명을 위한 주석 등 다른 사람이 이해하기 쉽게 개발한다.
 - 새로운 기능을 추가하고 싶다면, 구현 전에 문서를 작성하고 팀 내 리뷰와 설계과정을 거친다.
   
+## Life-Calendar 설계도 (문서)  
+https://docs.google.com/document/d/1kFv2AlgV6okS5pjSDy7rbzng9SRRdzr2FOT6_B91_5o/edit?usp=sharing
