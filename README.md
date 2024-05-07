@@ -13,4 +13,4 @@
 - 새로운 기능을 추가하고 싶다면, 구현 전에 문서를 작성하고 팀 내 리뷰와 설계과정을 거친다.
   
 ## Life-Calendar 설계도 (문서)  
-https://docs.google.com/document/d/1kFv2AlgV6okS5pjSDy7rbzng9SRRdzr2FOT6_B91_5o/edit?usp=sharing
+<a href="https://docs.google.com/document/d/1kFv2AlgV6okS5pjSDy7rbzng9SRRdzr2FOT6_B91_5o/edit?usp=sharing" target="_blank">문서 열기</a>
