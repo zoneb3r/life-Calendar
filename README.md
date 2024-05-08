@@ -14,3 +14,10 @@
   
 ## Life-Calendar 설계도 (문서)  
 <a href="https://docs.google.com/document/d/1kFv2AlgV6okS5pjSDy7rbzng9SRRdzr2FOT6_B91_5o/edit?usp=sharing" target="_blank">문서 열기</a>
+
+## Life-Calendar 기능
+- 사용자의 정보
+- 로그인 로그아웃 기능
+- 날짜 표시
+- 사용자의 감정 표시
+- 사용자의 감정 기록
