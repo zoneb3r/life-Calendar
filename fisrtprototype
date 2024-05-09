@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Calendar</title>
+    <style>
+        /* CSS 코드 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .calendar {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+        }
+
+        .month {
+            margin-bottom: 20px;
+        }
+
+        .month-name {
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .days {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            grid-gap: 5px;
+        }
+
+        .day {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer; /* 커서를 변경하여 클릭 가능하게 만듭니다 */
+        }
+
+        .day:hover {
+            background-color: #f0f0f0;
+        }
+
+        .legend {
+            margin-top: 20px;
+        }
+
+        .legend-item {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Life Calendar</h1>
+        <div class="calendar"></div>
+
+        <hr>
+
+        <div class="legend">
+            <h2>색상 설명</h2>
+            <div class="legend-item" style="color: red;">빨강: 이 날이 가장 기쁨</div>
+            <div class="legend-item" style="color: orange;">주황: 이 날은 기쁨</div>
+            <div class="legend-item" style="color: green;">초록: 이 날이 평범함</div>
+            <div class="legend-item" style="color: skyblue;">하늘색: 이 날이 우울함</div>
+            <div class="legend-item" style="color: blue;">파랑: 이 날이 가장 슬픔</div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript 코드
+ document.addEventListener("DOMContentLoaded", function() {
+    const calendarDiv = document.querySelector('.calendar');
+
+    // Create months of the year
+    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    months.forEach(month => {
+        const monthElement = document.createElement('div');
+        monthElement.classList.add('month');
+        calendarDiv.appendChild(monthElement);
+
+        const monthName = document.createElement('div');
+        monthName.classList.add('month-name');
+        monthName.textContent = month;
+        monthElement.appendChild(monthName);
+
+        const daysElement = document.createElement('div');
+        daysElement.classList.add('days');
+        monthElement.appendChild(daysElement);
+
+        // Get number of days in the month
+        const monthIndex = months.indexOf(month);
+        const daysInMonth = new Date(2022, monthIndex + 1, 0).getDate();
+
+        // Create days of the month
+        for (let i = 1; i <= daysInMonth; i++) {
+            const dayElement = document.createElement('div');
+            dayElement.classList.add('day');
+            dayElement.textContent = i;
+            daysElement.appendChild(dayElement);
+
+            // Add click event listener to each day
+            dayElement.addEventListener('click', function() {
+                // Prompt user to choose a color
+                const color = prompt("Choose a color for your mood (e.g., red, blue, green):");
+
+                // Prompt user to choose brightness
+                const brightness = prompt("Choose the brightness of your mood (e.g., very bright, bright, normal, dark, very dark):");
+
+                // Change background color of the clicked day
+                dayElement.style.backgroundColor = color;
+
+                // Display mood based on brightness
+                alert("You were " + brightness + " on this day.");
+            });
+        }
+    });
+});
+
+    </script>
+</body>
+</html>
